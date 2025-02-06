@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sguardo Oltre è una cooperativa socialle...">
+    <meta name="keywords" content="Napoli, cooperattiva socialle, servizio, lavoro, accessibilità, Sguardo, oltre, servizio sociale, progetto, Sguardo oltre cooperativa, Sguardo Oltre,
+    società, disabilità, ciechi, ipovedenti, prospettiva medina">
+    <meta name="author" content="SguardoOltre">
+    <title>Sguardo Oltre - coperativa sociale</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Definizione dei colori */
+        :root {
+            --rosso-principale: #5f0101;
+            --rosso-secondario: #8d1313;
+            --bianco: #ffffff;
+            --nero: #000000;
+            --oro: #FFD700;
+            --grigio-chiarissimo: #f4f4f4;
+            --rosso-chiaro: #350000;
+            --bianco-opaco: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Stili di base */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--rosso-principale);
+            color: var(--bianco);
+            line-height: 1.3;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Contenitore */
+        .container {
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        /* Cornice */
+        .cornice {
+            border: 3px solid black;
+            border-radius: 5px;
+            box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            margin: 20px auto;
+            background-color: var(--bianco-opaco);
+            justify-content: center; 
+            align-items: center; 
+            overflow: hidden; 
+}
+
+h2 {
+  margin: 0; 
+  text-align: center; 
+}
+
+h4 {
+            color: var(--rosso-chiaro);
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 2px;
+            line-height: 1.3;
+            text-align: center; 
+            position: relative;
+            text-transform: uppercase;
+        }
+ 
+        h4::after{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background-color: var(--oro);
+}
+
+@media (max-width: 768px) {h4
+    {
+    font-size: 0.7em;  
+}
+     }
+
+
+        p {
+    font-size: 0.8em;  
+    position: relative;
+}
+P::after{
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background-color: var(--oro);
+}
+
+        /* Stile generico per i bottoni */
+        a {
+            padding: 12px 24px;
+            border-radius: 30px;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+            box-shadow: none;
+            text-decoration: none;
+            color: var(--bianco);
+            background-color: var(--rosso-principale);
+            width: 40%;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        a:hover {
+            color: var(--oro);
+            background-color: var(--rosso-secondario);
+            transform: translateY(-5px);
+        }
+        @media (max-width: 768px) {
+    a {
+        width: 90%;
+        }
+    }
+
+    
+
+/* Stile dei contatti */
+.contact-buttons {
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: center;  
+    align-items: center;  
+    width: 100%;  
+    gap: 20px;  
+}
+
+
+.contact-button {
+    display: inline-block;
+    width: 100%; 
+    padding: 10px 20px;  
+    background-color: var(--rosso-principale);  
+    color: var(--bianco);  
+    text-align: center;
+    text-decoration: none;
+    border-radius: 15px;
+    font-weight: bold;
+    transition: background-color 0.3s;  
+}
+
+/* Effetto hover sui bottoni */
+.contact-button:hover {
+    background-color: var(--rosso-secondario);
+    color: var(--oro);
+}
+
+/* Media query per desktop o dispositivi con schermo largo */
+@media (min-width: 769px) {
+    .contact-buttons {
+        flex-direction: row;  
+    }
+
+    .contact-button {
+        width: auto;  
+        max-width: 300px;  
+    }
+}
+
+       
+        /* Barra di navigazione */
+    nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--rosso-principale);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 3px solid gold;
+            width: 100%;
+            box-sizing: border-box;
+            flex-wrap: wrap;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Quando la pagina è scrollata (la barra non cambia, solo l'icona hamburger) */
+        nav.scrolled {
+            padding: 10px 20px; 
+        }
+
+        /* Stile dei link nella barra di navigazione */
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            padding-top: auto;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--oro);
+            padding-top: 20px; 
+            background: none;
+            transform: translateY(-5px);
+        }
+
+        /* Icona hamburger */
+        .hamburger {
+            display: none; 
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 25px;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            background-color: var(--oro);
+            height: 5px;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        /* Lista di link (per desktop) */
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Media query per Desktop */
+        @media (min-width: 1024px) {
+            body {
+                font-size: 16px;
+            }
+
+            /* La barra di navigazione rimane invariata durante lo scroll */
+            nav ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none; /* Nascondi hamburger su desktop */
+            }
+        }
+
+        /* Media query per Tablet */
+        @media (max-width: 1024px) and (min-width: 768px) {
+            body {
+                font-size: 14px;
+            }
+
+            /* La barra di navigazione resta invariata su tablet, con i link visibili */
+            nav ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: none; /* Nascondi hamburger su tablet */
+            }
+        }
+
+        /* Media query per Mobile */
+        @media (max-width: 767px) {
+            body {
+                font-size: 12px;
+            }
+
+            /* Nasconde i link di navigazione inizialmente */
+            nav ul {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                padding: 15px 0;
+                background-color: rgba(0, 0, 0, 0.7); 
+                position: absolute;
+                top: 100%;
+                left: 0;
+                transition: transform 0.3s ease-in-out;
+                transform: translateY(-100%);
+            }
+
+            /* Mostra l'icona hamburger su mobile */
+            .hamburger {
+                display: flex; 
+            }
+
+            /* Quando il menu è attivo (cliccando sull'hamburger), i link si aprono */
+            nav.active ul {
+                display: flex;
+                transform: translateY(0); 
+            }
+
+            /* Aggiungiamo un po' di spazio tra i link e centrali */
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            nav a {
+                font-size: 16px;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+                background-color: #00000000;
+            }
+
+            /* Cambia il colore di sfondo al passaggio del mouse */
+            nav a:hover {
+                background-color: rgba(255, 215, 0, 0.8);
+                transform: scale(1.05);
+                color: #fff;
+            }
+
+            /* Centra l'icona hamburger al centro della pagina */
+            nav.scrolled {
+                justify-content: center;
+            }
+        }
+
+        /* Header */
+        header {
+            background-color: var(--rosso-principale);
+            background-size: cover;
+            background-position: center;
+            color: var(--bianco);
+            padding: 60px 20px;
+            text-transform: uppercase;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+            position: relative;
+            font-weight: bold;
+        }
+
+        header h1::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--oro);
+        }
+
+        header h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 1.6rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+        }
+
+        /* Sezioni */
+        section {
+            background-color: var(--bianco-opaco);
+            border: 2px solid var(--nero);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 15px;
+            width: 100%;
+            max-width: 900px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        section h2 {
+            font-size: 2.8em;
+            color: var(--rosso-principale);
+            margin-bottom: 5px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background-color: var(--oro);
+        }
+
+        section h3 {
+            font-size: 1.6em;
+            color: var(--rosso-principale);
+            position: relative;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        section h3::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 20%;
+            right: 20%;
+            height: 2px;
+            background-color: var(--oro);
+        }
+
+
+        section p {
+            color: var(--nero);
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+
+        
+
+    /* Stile per la sezione progetti */
+#progetti {
+    background-color: var(--bianco-opaco);
+    padding: 20px;
+    margin-top: 5px;
+    border-radius: 15px;
+    width: 100%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Titolo della sezione */
+#progetti h2 {
+    color: var(--rosso-principale);
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/* Stile per i singoli progetti */
+.progetto {
+    background-color: var(--bianco-opaco);
+    border: 2px solid var(--rosso-principale);
+    padding: 20px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+/* Hover per i progetti */
+.progetto:hover {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Immagini dei progetti */
+.progetto img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+/* Pulsante per scoprire di più */
+.btn-progetto {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--rosso-principale);
+    border-radius: 30px;
+    background-color: var(--rosso-principale);
+    color: var(--bianco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-progetto:hover {
+    background-color: var(--rosso-secondario);
+    color: var(--oro);
+}
+
+.progetto p {
+    font-size: 12;  
+}
+
+/* Responsive per dispositivi mobili */
+@media (max-width: 768px) {
+    #progetti {
+        width: 90%;
+        padding: 20px;      
+    }
+
+    #progetti h2 {
+        font-size: 1.8em; 
+    }
+
+    .progetto {
+        padding: 15px; 
+    }
+
+    .progetto h3 {
+        font-size: 1.4em;
+        position: relative; 
+    }
+    
+
+    .progetto p {
+        font-size: 0.9em; 
+    }
+
+    .btn-progetto {
+        font-size: 0.9em; 
+        padding: 10px 20px; 
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .progetto p {
+        font-size: 0.9em;  
+    }
+}
+
+/* news */
+
+  /* Stile del carosello */
+.carosello {
+    width: 100%;
+    max-height: 500px; 
+    margin: auto;
+    overflow-y: auto;  
+    white-space: normal;  
+    border: 1px solid var(--nero);
+    border-radius: 8px;
+    scroll-snap-type: y mandatory;  
+    scrollbar-width: thin;
+    background-color: var(--grigio-chiarissimo);
+}
+
+/* Contenitore del carosello, cambia la disposizione a colonna */
+.carosello-contenuto {
+    display: flex;
+    flex-direction: column;  
+}
+
+/* Gli item del carosello */
+.carosello-item {
+    min-height: 100%;  
+    padding: 20px;
+    box-sizing: border-box;
+    scroll-snap-align: start;  
+}
+
+/* Stile per la notizia */
+.notizia {
+    font-size: 18px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.notizia::before{
+             content: '';
+            position: absolute;
+            top: -115px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background-color: var(--rosso-principale);  
+}
+@media (max-width: 768px) {
+    .notizia::before{
+        top: -85px;
+        height: 3px;
+}
+}
+/* Stile per la data */
+.data {
+    font-size: 14px;
+    color: #888;
+    margin-bottom: 10px;
+}
+
+/* Bottoni nel carosello */
+.bottoni-container {
+    margin-top: 15px;
+}
+
+.bottoni-container a {
+    display: inline-block;
+    padding: 12px 24px;
+    border: 2px solid var(--rosso-principale);
+    border-radius: 30px;
+    background-color: var(--rosso-principale);
+    color: var(--bianco);
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.bottoni-container a:hover {
+    background-color: var(--rosso-secondario);
+    color: var(--oro);
+}
+
+
+
+/* Personalizzazione della scrollbar per il carosello */
+.carosello::-webkit-scrollbar-thumb {
+    background-color: var(--rosso-chiaro);
+    border-radius: 4px;
+}
+
+.carosello::-webkit-scrollbar-track {
+    background: #000000;
+}
+/* Media Query per dispositivi mobili (schermi più piccoli di 768px) */
+@media (max-width: 768px) {
+    .carosello {
+        max-height: 350px; 
+    }
+
+    .carosello-item {
+        padding: 10px; 
+    }
+
+    .notizia {
+        font-size: 16px; 
+    }
+
+    .data {
+        font-size: 12px; 
+    }
+
+    .bottoni-container {
+        margin-top: 10px;
+    }
+
+    .bottoni-container a {
+        padding: 6px 12px; 
+        font-size: 14px; 
+    }
+}
+
+.carosello-contenuto p {
+            color: var(--nero);
+            font-size: 0.8em;
+            font-weight: bold;
+            margin-top: 5px;
+            line-height: 1.3;
+        }
+/* Footer */
+
+footer {
+            background-color: var(--rosso-chiaro);
+            color: var(--bianco);
+            padding: 50px;
+            width: 100%;
+            text-align: center;
+     border: 3px solid var(--oro); 
+    border-radius: 5px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5); 
+}
+/* Stile per la parte dei contenuti principali del footer */
+.footer-content p {
+  margin: 5px 0; 
+  font-size: 14px; 
+}
+.footer-content p::after{
+    content: none;
+}
+/* Aggiungi un po' di spazio tra le righe */
+.footer-content strong {
+  font-weight: bold; 
+}
+
+/* Stile per il link PEC */
+.footer-content a {
+  font-size: 12px;
+  color: var(--oro); 
+  text-decoration: none; 
+  background: none;
+}
+
+.footer-content a:hover {
+  text-decoration: underline; 
+}
+
+/* Stile per la parte legale del footer */
+.footer-legal {
+  margin-top: 10px; 
+}
+
+.footer-legal p {
+  font-size: 12px;
+  color: #b1b1b1; 
+}
+
+   
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>SGUARDO OLTRE</h1>
+    </header>
+
+    
+  <!-- Barra di navigazione -->
+  <nav role="navigation">
+    <ul>
+        <li><a href="#chi-siamo" aria-label="Vai alla sezione Chi siamo">CHI SIAMO</a></li>
+        <li><a href="#progetti" aria-label="Vai alla sezione Servizi">PROGETTI</a></li>
+        <li><a href="#news" aria-label="Vai alla sezione news">NEWS</a></li>
+        
+    </ul>
+
+    <!-- Icona hamburger con aria-label e aria-expanded -->
+    <div class="hamburger" aria-label="Menu navigazione" aria-expanded="false" onclick="toggleMenu()" tabindex="0" role="button" aria-controls="navMenu" aria-haspopup="true" onkeypress="handleKeyPress(event)">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</nav>
+<!-- sezioni -->
+<!-- S.chi siamo -->
+<section id="chi-siamo">
+    <h2>Chi Siamo</h2>
+    <div class="cornice">
+    <p>Sguardo Oltre è una cooperativa sociale che nasce con
+         l’obiettivo di promuovere l’inclusione e il benessere delle persone, con particolare attenzione alle persone con disabilità visiva.
+         La nostra missione è quella di offrire servizi che supportano l’autonomia e la partecipazione attiva delle persone con disabilità nella società.
+          Ci impegniamo a creare opportunità per un’integrazione concreta e per il miglioramento della qualità della vita</p>
+</div>
+</section>
+<!-- S.progetti -->
+    <section id="progetti">
+        <h2>PROGETTI</h2>
+            <div class="cornice">
+                <h4>Scopri i nosti progetti, dove creatività e innovazione si incontrano</h4>
+            <div class="progetto">
+                <h3>Prospettiva Medina</h3>
+                <p>
+                    Prospettiva Medina è un affittacamere situato nel cuore di Napoli. La nostra struttura è progettata per essere completamente accessibile a persone con disabilità, garantendo una
+                    permanenza comoda e sicura a tutti i nostri ospiti.
+                </p>
+                <div>
+                    <a href="https://sguardooltre.github.io/ProspettivaMedina/" target="_blank" class="btn-progetto">SCOPRI DI PIU</a>
+                </div>
+                
+            </div>
+            </div>
+
+            
+    </section>
+<!-- S.contatti-->
+    <section id="news">
+        <h2 class="text-center">NEWs</h2>
+        <div class="cornice">
+            <h4>Rimani aggiornato sui nosti eventi e collaborazioni</h4>
+        
+            <div class="carosello" id="carosello">
+                <div class="carosello-contenuto" id="carosello-contenuto">
+                  
+                
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- S.Footer -->
+    <footer>
+        <div class="footer-content">
+          <p><strong>Ragione Sociale:</strong> SGUARDO OLTRE - SOCIETÀ COOPERATIVA SOCIALE</p>
+          <p><strong>Partita IVA:</strong> 09888981215</p>
+          <p><strong>Indirizzo:</strong> Via Claudio Galeno 46, 80053 Castellammare di Stabia (NA)</p>
+          <p><strong>PEC:</strong> <a href="mailto:sguardooltre@pec.it" target="_blank" aria-label="indirizzo pec">sguardooltre@pec.it</a></p>
+          <p><strong>E-mail:</strong> <a href="mailto:sguardooltre@libero.it" target="_blank" aria-label="indirizzo pec">sguardooltre@libero.it</a></p>
+          <p><strong>TEL:</strong><a href="https://wa.me/3908119339073" target="_blank" aria-label="WhatsApp">3908119339073</a> </p>
+        </div>
+        <div class="footer-legal">
+          <p>&copy; 2025 SGUARDO OLTRE.</p>
+        </div>
+      </footer>
+
+<!-- javaScript -->
+    <script>
+         // Funzione per rilevare lo scroll
+     window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) { // Quando si scorre oltre 50px dalla parte superiore
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Funzione per aprire/chiudere il menu hamburger
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            const hamburger = document.querySelector('.hamburger');
+            nav.classList.toggle('active');
+
+            // Cambia aria-expanded in base allo stato del menu
+            const isActive = nav.classList.contains('active');
+            hamburger.setAttribute('aria-expanded', isActive.toString());
+        }
+
+        // Funzione per gestire l'evento di pressione del tasto sulla tastiera (Enter o barra spaziatrice)
+        function handleKeyPress(event) {
+            if (event.key === 'Enter' || event.key === ' ') { // 'Enter' o 'Spazio'
+                toggleMenu();
+            }
+        }
+
+        // Chiudi il menu quando un link viene cliccato
+        const links = document.querySelectorAll('nav a');
+        links.forEach(link => {
+            link.addEventListener('click', function() {
+                const nav = document.querySelector('nav');
+                if (nav.classList.contains('active')) {
+                    nav.classList.remove('active');
+                    const hamburger = document.querySelector('.hamburger');
+                    hamburger.setAttribute('aria-expanded', 'false');
+                }
+            });
+        });
+        
+  // Funzione per caricare il file JSON
+  async function caricaNotizie() {
+      try {
+        const response = await fetch('data/notizie.json');  // Carica il file JSON
+        const notizie = await response.json();  // Parso il contenuto del JSON
+
+        // Aggiungi ogni notizia al carosello
+        const caroselloContenuto = document.getElementById('carosello-contenuto');
+
+        notizie.forEach(notizia => {
+          const item = document.createElement('div');
+          item.classList.add('carosello-item');
+          
+          // Costruzione del contenuto HTML della notizia
+          let notiziaHTML = `
+            <h3>${notizia.titolo}</h3>
+            <p class="data">${notizia.data}</p>
+            <p class="notizia">${notizia.descrizione}</p>
+          `;
+
+          // Se ci sono bottoni, aggiungili
+          if (notizia.bottoni && notizia.bottoni.length > 0) {
+            let bottoniHTML = '<div class="bottoni-container">';
+            notizia.bottoni.forEach(bottone => {
+              bottoniHTML += `
+                <a href="${bottone.link}" target="_blank">${bottone.testo}</a>
+              `;
+            });
+            bottoniHTML += '</div>';
+            notiziaHTML += bottoniHTML;
+          }
+
+          item.innerHTML = notiziaHTML;
+          caroselloContenuto.appendChild(item);
+        });
+      } catch (error) {
+        console.error('Errore nel caricare il file JSON:', error);
+      }
+    }
+
+    // Carica le notizie quando la pagina è pronta
+    window.onload = caricaNotizie;
+
+    
+</script>
+
+</body>
+<!-- OBifolc -->
+</html>
