@@ -1,5 +1,16 @@
 [
     {
+      "titolo": "la parigina",
+      "data": "2025-02-07",
+      "descrizione": "novativa applicazione consente alle persone non vedenti o ipovedenti di identificare oggetti tramite la scansione di codici QR o tag NFC. Utilizzando la fotocamera o il lettore NFC del dispositivo, l’app fornisce informazioni vocali sugli oggetti scansionati, facilitando così l’autonomia e l’interazione indipendente con l’ambiente. Con questo strumento, vogliamo garantire un’esperienza inclusiva per tutti i nostri visitatori.",
+      "bottoni": [
+        {
+          "testo": "Scopri di più",
+          "link": "https://apps.apple.com/it/app/blindtag-scanner/id1622064688"
+        }
+      ]
+    },
+    {
       "titolo": "BlindTag-Scanner",
       "data": "2025-02-06",
       "descrizione": "Per migliorare l’accessibilità della nostra struttura “Prospettiva Medina”, abbiamo adottato l’app Blind Tag Scanner. Questa innovativa applicazione consente alle persone non vedenti o ipovedenti di identificare oggetti tramite la scansione di codici QR o tag NFC. Utilizzando la fotocamera o il lettore NFC del dispositivo, l’app fornisce informazioni vocali sugli oggetti scansionati, facilitando così l’autonomia e l’interazione indipendente con l’ambiente. Con questo strumento, vogliamo garantire un’esperienza inclusiva per tutti i nostri visitatori.",
